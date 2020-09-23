@@ -1,20 +1,52 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Platform, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import {GiftedChat} from 'react-native-gifted-chat';
+import Fire from '../Fire';
 
 export default class ChatScreen extends React.Component {
-    render() {
-        return (
-            <View style={StyleSheet.component}>
-                <Text>Pantalla de mensajes</Text>
-            </View>
+
+    state = {
+        messages: []
+    }
+
+    get user() {
+        return {
+            _id: Fire.uid,
+            name: this.props.navigation.state.params.name
+        }
+    }
+
+    componentDidMount() {
+        Fire.get(message =>
+            this.setState(previous => ({
+                messages: GiftedChat.append(previous.messages, message)
+            }))
         );
+    }
+
+    componentWillUnmount() {
+        Fire.off();
+    }
+
+    render() {
+        const chat = <GiftedChat messages={this.state.messages} onSend={Fire.send} user={this.user} />;
+        
+        if (Platform.OS === 'android') {
+            return (
+                <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding" keyboardVerticalOffset={30} enabled>
+                    {chat}
+                </KeyboardAvoidingView>
+            )
+        }
+        return <SafeAreaView style={{ flex: 1 }}>{chat}</SafeAreaView>
     }
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: "#F4F5F7",
         justifyContent: "center",
         alignItems: "center"
-    }
+    },
 });
