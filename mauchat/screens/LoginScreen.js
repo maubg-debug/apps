@@ -31,9 +31,9 @@ export default class LoginScreen extends React.Component {
                         onChangeText={name => { this.setState({name})} } 
                         value={this.state.name}
                     />
-                    <View style={{alingItems: "flex-end", marginTop: 64}}>
+                    <View style={{marginLeft: 250, marginTop: 64}}>
                         <TouchableOpacity style={styles.continue} onPress={this.continue}>
-                            <Ionicons name="md-arrow-round-foward" size={24} color="#FFF" />
+                            <Ionicons name="md-arrow-round-forward" size={24} color="#FFF" />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         top: -20
     },
     header: {
-        fontWeight: "800",
+        fontWeight: "900",
         fontSize: 30,
         color: "#514E5A",
         marginTop: 32
@@ -71,5 +71,13 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         color: "#514E5A",
         fontWeight: "600"
+    },
+    continue: {
+        width: 70,
+        height: 70,
+        borderRadius: 70 / 2,
+        backgroundColor: "#9075E3",
+        alignItems: "center",
+        justifyContent: "center"
     }
 });
