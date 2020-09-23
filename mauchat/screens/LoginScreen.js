@@ -1,35 +1,44 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from 'react-native';
+import {Ionicons} from '@expo/vector-icons';
+
 
 export default class LoginScreen extends React.Component {
 
     state = {
         name: ""
-    }
+    };
 
     continue = () => {
-        this.props.navigation("Chat", {name: this.state.name})
-    }
+        this.props.navigation("Chat", { name: this.state.name });
+    };
 
     render() {
         return (
             <View style={StyleSheet.container}>
-                <View style={tyle.circle} />
+                <View style={styles.circle} />
                 <View style={{marginTop: 64}}>
                     <Image 
-                        source={require('../assets/Chat.png')} 
+                        source={require("../assets/chat.png")} 
                         style={{width: 100, height: 100, alignSelf: "center"}}
                     />
                 </View>
-                <View style={styles.header}>Nombre de usuario</View>
-                <TextInput 
-                    style={styles.input} 
-                    placeholder="Nombre..." 
-                    onChangeText={name => { this.setState({name})} } 
-                    value={this.state.name}
-                />
+                <View style={{marginHorizontal: 32}}>
+                    <Text style={styles.header}>Nombre de usuario</Text>
+                    <TextInput 
+                        style={styles.input} 
+                        placeholder="Nombre..." 
+                        onChangeText={name => { this.setState({name})} } 
+                        value={this.state.name}
+                    />
+                    <View style={{alingItems: "flex-end", marginTop: 64}}>
+                        <TouchableOpacity style={styles.continue} onPress={this.continue}>
+                            <Ionicons name="md-arrow-round-foward" size={24} color="#FFF" />
+                        </TouchableOpacity>
+                    </View>
+                </View>
             </View>
-        )
+        );
     }
 }
 

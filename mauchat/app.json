@@ -1,12 +1,20 @@
 {
-  "name": "mauchat",
-  "displayName": "mauchat",
   "expo": {
     "name": "mauchat",
     "slug": "mauchat",
     "version": "1.0.0",
+    "orientation": "portrait",
+    "splash": {
+      "resizeMode": "contain"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
   }
 }
