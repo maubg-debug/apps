@@ -16,7 +16,7 @@ class Fire {
                 storageBucket: "mauchat-1d06d.appspot.com",
                 messagingSenderId: "394092665540",
                 appId: "1:394092665540:web:2e3cf387845c301fa04791",
-                measurementId: "G-1WVFJ7GZ7R"                 
+                measurementId: "G-1WVFJ7GZ7R"              
             });
         }
     };
@@ -33,7 +33,7 @@ class Fire {
 
     // Ponemos los mensages en la base de datos
     send = messages => {
-        messages.forEach(item => {
+        messages.foreach(item => {
             const message = {
                 text: item.text,
                 timestamp: firebase.database.ServerValue.TIMESTAMP,
@@ -68,11 +68,11 @@ class Fire {
     }
 
     get db() {
-        return firebase.database().ref("messages")
+        return firebase.database().ref("messages");
     }
 
     get uid() {
-        return (firebase.auth().currentUser || {}).uid
+        return (firebase.auth().currentUser || {}).uid;
     }
 }
 

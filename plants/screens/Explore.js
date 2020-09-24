@@ -69,7 +69,7 @@ class Explore extends Component {
     return (
       <TouchableOpacity
         key={`img-${index}`}
-        onPress={() => navigation.navigate("Product")}
+        onPress={() => navigation.navigate("Productos")}
       >
         <Image
           source={img}
