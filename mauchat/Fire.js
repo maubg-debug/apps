@@ -31,7 +31,7 @@ class Fire {
         });
     };
 
-    // POnemos los mensages en la base de datos
+    // Ponemos los mensages en la base de datos
     send = messages => {
         messages.forEach(item => {
             const message = {
