@@ -13,5 +13,5 @@ const AppNavigator = createStackNavigator(
     headerMode: "none"
   }
 )
-
+// Creamos la app
 export default createAppContainer(AppNavigator);

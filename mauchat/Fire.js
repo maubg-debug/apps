@@ -20,7 +20,9 @@ class Fire {
             });
         }
     };
-
+    // Checkeamos si esta dentro
+    // Si por alguna razon no lo esta
+    // Que entre anonima mente
     checkAuth = () => {
         firebase.auth().onAuthStateChanged(user => {
             if (!user) {
@@ -29,6 +31,7 @@ class Fire {
         });
     };
 
+    // POnemos los mensages en la base de datos
     send = messages => {
         messages.forEach(item => {
             const message = {
@@ -36,12 +39,13 @@ class Fire {
                 timestamp: firebase.database.ServerValue.TIMESTAMP,
                 user: item.user
             }
-
+            // Le hacemos un 'push'
             this.db.push(message)
         });
     };
 
     parse = message => {
+        // Mensage = input del usuario
         const {user, text, timestamp} = message.val()
         const {key: _id} = message
         const createdAt = new Date(timestamp)
@@ -59,6 +63,7 @@ class Fire {
     };
 
     off() {
+        // Nos desconectamos de la base de datos
         this.db.off()
     }
 
@@ -70,5 +75,6 @@ class Fire {
         return (firebase.auth().currentUser || {}).uid
     }
 }
+
 
 export default new Fire();

@@ -9,11 +9,13 @@ export default class LoginScreen extends React.Component {
         name: ""
     };
 
+    // Esto es para venir de el log in hasta el chat de una forma muy elegante 
     continue = () => {
         this.props.navigation.navigate("Chat", { name: this.state.name });
     };
 
     render() {
+        // La app
         return (
             <View style={StyleSheet.container}>
                 <View style={styles.circle} />
@@ -42,6 +44,7 @@ export default class LoginScreen extends React.Component {
     }
 }
 
+// Estilos
 const styles = StyleSheet.create({
     container: {
         flex: 1,
