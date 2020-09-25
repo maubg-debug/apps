@@ -115,7 +115,7 @@ export default class Trip extends Component {
         <TouchableOpacity
           activeOpacity={0.8}
           style={[styles.mapMyLocation, blockStyles.shadow]}
-          onPress={() => alert("My Location")}
+          onPress={() => alert("Mi locacion")}
         >
           <Block center middle shadow>
             <Icon.FontAwesome
