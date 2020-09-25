@@ -2,29 +2,29 @@ import React, { Component } from "react";
 import { Animated, Image, ScrollView, StyleSheet } from "react-native";
 import { Block, Button, Text, Utils } from "expo-ui-kit";
 
-// constants
+// constantes
 import { images, theme } from "../constants";
 const { background } = images;
 
-// theme
+// tema
 const { rgba } = Utils;
 const { SIZES, COLORS } = theme;
 
 const backgrounds = [
   {
-    title: "Secured, forever.",
+    title: "Asegurado, para siempre.",
     description:
       "Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis.",
     img: background.welcome
   },
   {
-    title: "Encrypted, forever.",
+    title: "Cifrado, para siempre.",
     description:
       "Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis.",
     img: background.encrypted
   },
   {
-    title: "Privacy, forever.",
+    title: "Privacidad, para siempre.",
     description:
       "Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis.",
     img: background.privacy
@@ -159,7 +159,7 @@ export default class Welcome extends Component {
               bold
               margin={[SIZES.padding / 2, SIZES.padding * 2]}
             >
-              GET STARTED
+              EMPEZAR
             </Text>
           </Button>
         </Block>

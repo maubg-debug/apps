@@ -1,6 +1,6 @@
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 
-// import screens
+// importar las pantallas
 import Welcome from "../screens/Welcome";
 import VPN from "../screens/VPN";
 

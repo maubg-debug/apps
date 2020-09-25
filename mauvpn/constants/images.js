@@ -5,7 +5,7 @@ export const background = {
 };
 
 export const icons = {
-  // buttons
+  // botones
   checked: require("../assets/icons/checked.png"),
   dropdown: require("../assets/icons/dropdown.png"),
   offline: require("../assets/icons/offline.png"),

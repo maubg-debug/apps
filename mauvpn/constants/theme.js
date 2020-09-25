@@ -2,20 +2,20 @@ import { Utils } from "expo-ui-kit";
 
 const theme = {
   COLORS: {
-    // base colors
+    // base de colores
     primary: "#0094FC",
 
-    // color variations
+    // variacion de colores
     gray: "#535453",
   },
   SIZES: {
-    // global sizes
+    // tamaños globales
     base: 8,
     font: 16,
     radius: 30,
     padding: 26,
 
-    // font sizes
+    // fuentes
     h1: 34,
     h2: 24,
     h3: 20,

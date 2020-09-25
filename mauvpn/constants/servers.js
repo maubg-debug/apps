@@ -2,15 +2,15 @@ import { icons } from "./images";
 
 const servers = [
   {
-    name: "Automatic",
+    name: "Automático",
     icon: icons.automatic
   },
   {
-    name: "New York, NY",
+    name: "Nueva York, NY",
     icon: icons.us
   },
   {
-    name: "London",
+    name: "Londres",
     icon: icons.uk
   },
   {
@@ -18,7 +18,7 @@ const servers = [
     icon: icons.russia
   },
   {
-    name: "Sweden",
+    name: "Suecia",
     icon: icons.sweden
   },
   {
@@ -26,12 +26,12 @@ const servers = [
     icon: icons.australia
   },
   {
-    name: "New Delhi",
+    name: "Nueva Delhi",
     icon: icons.india
   },
   {
-    name: "Singapore",
-    icon: icons.singapore
+    name: "España",
+    icon: icons.spain
   }
 ];
 

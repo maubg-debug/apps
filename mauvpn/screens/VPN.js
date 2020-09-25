@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Image, Modal, StyleSheet, ScrollView } from "react-native";
 import { Block, Button, Text, Utils } from "expo-ui-kit";
 
-// constants
+// constantes
 import { images, theme, servers } from "../constants";
 const { icons } = images;
 
-// theme
+// tema
 const { rgba } = Utils;
 const { SIZES, COLORS } = theme;
 
@@ -52,7 +52,7 @@ export default class VPN extends Component {
         <Block bottom color={rgba(COLORS.gray, 0.2)}>
           <Block flex={false} white middle padding={[SIZES.padding, 0]}>
             <Text subtitle center gray>
-              Pick your Server
+              Elija su servidor
             </Text>
             <ScrollView>
               {servers.map(item => {
@@ -94,7 +94,7 @@ export default class VPN extends Component {
       <Block safe center space="between">
         <Block flex={false} padding={[SIZES.h3, 0]}>
           <Text title semibold>
-            VPN
+            MauVPN
           </Text>
         </Block>
 
@@ -138,7 +138,7 @@ export default class VPN extends Component {
               white={!connected}
               margin={[SIZES.padding / 2, 0]}
             >
-              {connected ? "DISCONNECT" : "CONNECT NOW"}
+              {connected ? "DESCONECTAR" : "CONECTATE AHORA"}
             </Text>
           </Button>
         </Block>
