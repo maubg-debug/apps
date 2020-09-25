@@ -12,7 +12,7 @@ export const icons = {
   online: require("../assets/icons/online.png"),
   unchecked: require("../assets/icons/unchecked.png"),
 
-  // countries
+  // paises
   australia: require("../assets/icons/australia.png"),
   automatic: require("../assets/icons/automatic.png"),
   india: require("../assets/icons/india.png"),
